@@ -81,7 +81,7 @@ const UpdatePromo = () => {
       <Header type="list" />
       <div className="container">
         <form onSubmit={handleUpdatePromo} className="custom-form">
-          <h1 className="update-promo-heading">Update Promo</h1>
+          <h1 className="create-promo-heading">Update Promo</h1>
           <div className="ui divider"></div>
           <div className="ui form">
             <div className="field">

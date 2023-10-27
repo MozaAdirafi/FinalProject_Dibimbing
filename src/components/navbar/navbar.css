@@ -1,0 +1,80 @@
+.navbar {
+  height: 60px;
+  background-color: #003580;
+  display: flex; 
+  justify-content: center;
+}
+
+.navContainer {
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.profileImage {
+  border-radius: 50%;
+  width: 45px; /* Adjust the size as needed */
+  height: 45px; /* Adjust the size as needed */
+  margin-right: 10px; /* Add margin to separate it from the right edge */
+}
+
+.userMenuContainer {
+  position: relative;
+}
+
+.userMenu {
+  cursor: pointer;
+  display: flex;
+  align-items: center; 
+}
+
+.userName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdownMenu a {
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdownMenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 8px 0;
+}

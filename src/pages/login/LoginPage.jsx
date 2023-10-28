@@ -40,10 +40,10 @@ const navigate = useNavigate()
         localStorage.setItem("name", response.data.data.name); 
         navigate("/")
       } else {
-        setErrorMessage("Registration Failed");
+        setErrorMessage("Login Failed");
       }
     } catch (error) {
-      setErrorMessage("Registration Failed");
+      setErrorMessage("Login Failed");
     }
   };
 
@@ -64,8 +64,9 @@ const navigate = useNavigate()
       </div>
 
       <div className="w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 justify between">
+        <a href="/">
         <h1 className="text-4xl text-black font-extrabold ">Mooking</h1>
-
+        </a>
         <div className="w-full flex flex-col">
           <div className="w-full flex flex-col mb-10">
             <h3 className="text-2xl my-6 font-semibold mb-4">Login</h3>

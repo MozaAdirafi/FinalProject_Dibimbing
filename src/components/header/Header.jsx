@@ -101,11 +101,11 @@ const Header = ({ type }) => {
             Welcome to Mooking, where you can unlock a lifetime of discounts! Get rewarded for your travels with instant savings of 10% or more by simply creating a free Mooking account.
             </p>
             {isLoggedIn ? (
-              // Render the text related to the user being logged in
               <p className="headerText"></p>
             ) : (
-              // Render the Sign in / Register button for non-logged-in users
+              <a href="/login">
               <button className="headerBtn">Sign in / Register</button>
+              </a>
             )}
             <div className="headerSearch  w-30 h-14 p-0">
               <div className="headerSearchItem">

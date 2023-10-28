@@ -1,19 +1,19 @@
-import { useState,useEffect  } from 'react';
+import { useState, useEffect } from "react";
 
-import './navbar.css';
-import avatar from '../../assets/images/avatar.png';
+import "./navbar.css";
+import avatar from "../../assets/images/avatar.png";
 const Navbar = () => {
-  const isAuthenticated = !!localStorage.getItem('token');
+  const isAuthenticated = !!localStorage.getItem("token");
   const [showUserMenu, setShowUserMenu] = useState(false);
 
   const toggleUserMenu = () => {
     setShowUserMenu(!showUserMenu);
   };
 
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   useEffect(() => {
-    const storedName = localStorage.getItem('name');
+    const storedName = localStorage.getItem("name");
 
     if (storedName) {
       setName(storedName);
@@ -23,8 +23,8 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navContainer">
-        <a href='/'>
-        <span className="logo">Mooking</span>
+        <a href="/">
+          <span className="logo">Mooking</span>
         </a>
         <div className="navItems">
           {isAuthenticated ? (
@@ -41,7 +41,16 @@ const Navbar = () => {
                   <a href="/createcategory">Create Category</a>
                   <a href="/createpromo">Create promo</a>
                   <div className="divider"></div>
-                  <a href="/login">Sign out</a>
+                  <a
+                    href="/login"
+                    onClick={() => {
+                      localStorage.removeItem("token");
+                      localStorage.removeItem("name");
+                      localStorage.removeItem("role");
+                    }}
+                  >
+                    Sign out
+                  </a>
                 </div>
               )}
             </div>
